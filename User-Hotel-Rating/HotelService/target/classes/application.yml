@@ -1,0 +1,48 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: HOTEL-SERVICE
+  datasource:
+    url: jdbc:postgresql://localhost:5433/hotelService
+    username: postgres
+    password: Nitesh11@@
+    driver-class-name: org.postgresql.Driver
+  config:
+    import: optional:configserver:http://localhost:8085
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL82Dialect
+
+          #steps to enable this service as eureka client
+          # steps 1) pom file update
+          # 1-> add dependency eureka Discovery client
+          # 2-> add dependency management tag
+          # 3-> add cloud version below java version in pom.xml
+
+          # steps 2) main application file update
+        # 1-> add annotation @EnableEurekaClient
+
+        #  steps 3) update yml file
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#       defaultZone: http://localhost:8761/eureka
+
+okta:
+  oauth2:
+    issuer: https://dev-72514421.okta.com/oauth2/default
+    audience: api://default

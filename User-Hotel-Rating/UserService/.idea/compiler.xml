@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rating-service" />
+        <module name="config-server" />
+        <module name="HotelService" />
+        <module name="UserService" />
+        <module name="uploadfile" />
+        <module name="ServiceRegistry" />
+        <module name="ApiGateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-servier" target="11" />
+      <module name="storage-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGateway" options="-parameters" />
+      <module name="HotelService" options="-parameters" />
+      <module name="ServiceRegistry" options="-parameters" />
+      <module name="UserService" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="config-servier" options="-parameters" />
+      <module name="rating-service" options="-parameters" />
+      <module name="storage-service" options="-parameters" />
+      <module name="uploadfile" options="-parameters" />
+    </option>
+  </component>
+</project>

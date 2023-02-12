@@ -1,0 +1,13 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+# now the thing is other service will get register at this
+# server but this project is also a spring boot project so this
+# will also register itself on the server that we don't want. so to
+#avoid this make false the below properties
+  client:
+    register-with-eureka: false
+    fetch-registry: false
